@@ -58,100 +58,103 @@ function Login() {
 					fontFamily: "'Special Elite', cursive"
 				}} 
             >
-				<img src="/img/welcome.png" alt="Welcome!" className="mb-2"/>
+				
+					<img src="/img/welcome.png" alt="Welcome!" className="mb-2"/>
 
-                <div className="bg-[#104EA2] rounded-xl p-14 flex items-center relative">
-                    {/* Top Border Icons */}
-                    {[...Array(17)].map((_, index) => (
-                        <BsLightningFill 
-                            key={`top-${index}`} 
-                            className="absolute top-1 ml-2 mt-2 text-yellow-300 rotate-12" 
-                            style={{left: `${index * 36.4}px`}} 
-                        />
-                    ))}
+                	<div className="bg-[#104EA2] rounded-xl p-14 flex items-center relative">
+    
+                    	{[...Array(17)].map((_, index) => (
+                        	<BsLightningFill 
+                         	   key={`top-${index}`} 
+                         	   className="absolute top-1 ml-2 mt-2 text-yellow-300 rotate-12" 
+                         	   style={{left: `${index * 36.4}px`}} 
+                        	/>
+                    	))}
 
-                    {/* Bottom Border Icons */}
-                    {[...Array(17)].map((_, index) => (
-                        <BsLightningFill 
-                            key={`bottom-${index}`} 
-                            className="absolute bottom-1 ml-2 mb-2 text-yellow-300 rotate-12" 
-                            style={{left: `${index * 36.4}px`}} 
-                        />
-                    ))}
+                   		{[...Array(17)].map((_, index) => (
+                        	<BsLightningFill 
+                            	key={`bottom-${index}`} 
+                            	className="absolute bottom-1 ml-2 mb-2 text-yellow-300 rotate-12" 
+                            	style={{left: `${index * 36.4}px`}} 
+                       	 	/>
+                    	))}
 
-                    {/* Left Border Icons */}
-                    {[...Array(6)].map((_, index) => (
-                        <BsLightningFill 
-                            key={`left-${index}`} 
-                            className="mt-12 ml-1 absolute left-1 text-yellow-300 rotate-12" 
-                            style={{top: `${index * 37.5}px`}} 
-                        />
-                    ))}
+                    	{[...Array(6)].map((_, index) => (
+                        	<BsLightningFill 
+                            	key={`left-${index}`} 
+                            	className="mt-12 ml-1 absolute left-1 text-yellow-300 rotate-12" 
+                            	style={{top: `${index * 37.5}px`}} 
+                        	/>
+                    	))}
 
-                    {/* Right Border Icons */}
-                    {[...Array(6)].map((_, index) => (
-                        <BsLightningFill 
-                            key={`right-${index}`} 
-                            className="mt-12 mr-2 absolute right-1 text-yellow-300 rotate-12" 
-                            style={{top: `${index * 37.5}px`}} 
-                        />
-                    ))}
+                    	{/* Right Border Icons */}
+                    	{[...Array(6)].map((_, index) => (
+                        	<BsLightningFill 
+                            	key={`right-${index}`} 
+                            	className="mt-12 mr-2 absolute right-1 text-yellow-300 rotate-12" 
+                            	style={{top: `${index * 37.5}px`}} 
+                        	/>
+                    	))}
 
-                    <img 
-                        src="/img/cat.png" 
-                        alt="Login illustration" 
-                        className="w-full h-full mr-4 object-cover" 
-                    />
+                    	<img 
+                        	src="/img/cat.png" 
+                        	alt="Login illustration" 
+                        	className="w-full h-full mr-4 object-cover" 
+                    	/>					
 
+                    	<form onSubmit={HandleLogin}>
 
-					
+							<div className="flex flex-row text-xl justify-center text-white">
+								PERMANENT ACCOUNT LICENSE
+							</div>
 
-                    <form onSubmit={HandleLogin}>
-						<div className="flex flex-row text-xl justify-center text-white">
-							PERMANENT ACCOUNT LICENSE
-						</div>
-                        <div className="input-box flex flex-row p-2">
-                            <h1 className="text-white mr-2">Username</h1>
-                            <input 
-                                className="rounded-lg" 
-                                type="text" 
-                                value={userName}
-                                onChange={(e) => setUserName(e.target.value)}
-                                required 
-                            />
-                        </div>
+                        	<div className="input-box flex flex-row p-2">
+                            	<h1 className="text-white mr-2">Username</h1>
+                            	<input 
+                                	className="rounded-lg" 
+                                	type="text" 
+                                	value={userName}
+                                	onChange={(e) => setUserName(e.target.value)}
+                                	required 
+                            	/>
+                        	</div>
 
-                        <div className="input-box flex flex-row p-2">
-                            <h1 className="text-white ml-0.5 mr-2">Password</h1>
-                            <input 
-                                className="rounded-lg" 
-                                type="password" 
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required 
-                            />
-                        </div>
+                        	<div className="input-box flex flex-row p-2">
+                            	<h1 className="text-white ml-0.5 mr-2">Password</h1>
+                            	<input 
+                                	className="rounded-lg" 
+                                	type="password" 
+                                	value={password}
+                                	onChange={(e) => setPassword(e.target.value)}
+                                	required 
+                            	/>
+                        	</div>
 
-                        <div className="w-full rounded-lg mb-2 p-2"> 
-                            <button 
-                                type="submit" 
-                                className="bg-white rounded-full px-6 py-1 hover:bg-blue-600"
-                            >
-                                Login
-                            </button>
-                        </div>
+                        	<div className="w-full rounded-lg mb-2 p-2"> 
+                            	<button 
+                                	type="submit" 
+                                	className="bg-white rounded-full px-6 py-1 hover:bg-blue-600"
+                            	>
+                                	Login
+                            	</button>
+                        	</div>
 
-                        <div className="register-link text-white">
-							<p>
-        						Don't have an account?{" "}
-        						<Link to="/register" className="text-blue-500 hover:underline">
-            						Register
-        						</Link>
-    						</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
+                        	<div className="register-link text-white">
+								<p>
+        							Don't have an account?{" "}
+        							<Link to="/register" className="text-blue-500 hover:underline">
+            							Register
+        							</Link>
+    							</p>
+                       	 	</div>
+
+                    	</form>
+
+                	</div>
+
+				</div>
+
+            
         </>
     );
 }
