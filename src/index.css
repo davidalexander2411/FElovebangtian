@@ -8,3 +8,25 @@
     font-style: normal;
   }
   
+  .mager-fix {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 900px;
+    max-width: 40%;
+}
+.bantu-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; 
+    max-width: 80%; 
+}
+.bantu-fix {
+    position: absolute;
+    bottom: 25%;
+    right: 20%;
+    width: 350px;
+    max-width: 50%;
+}
