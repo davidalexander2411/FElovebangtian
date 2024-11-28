@@ -10,6 +10,7 @@ import SignUp from "./pages/SignUp.jsx";
 import Cover from "./pages/Cover.jsx";
 import MauApa from "./pages/MauApa.jsx";
 import Jamboard from "./pages/Request.jsx";
+import Makanan from "./pages/Makanan.jsx";
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")).render(
 				<Route path="/" element={<Cover />} />
 				<Route path="/mau-apa" element={<MauApa />} />
 				<Route path="/main-menu" element={<App />} />
+				<Route path="/main-menu/makanan" element={<Makanan />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<SignUp />} />
 				<Route path="/menu" element={<Menu />} />
