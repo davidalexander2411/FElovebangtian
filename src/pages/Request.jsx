@@ -76,17 +76,21 @@ const Jamboard = () => {
                 />
               </div>
               <div className="px-24 hover:scale-105 active:scale-100 transition-all cursor-pointer">
-                <img src={feeinput} alt="Fee" className="w-56 h-auto" />
-                <input
-                  type="number"
-                  id="fee"
-                  value={newRequest.fee}
-                  onChange={(e) =>
-                    setNewRequest({ ...newRequest, fee: e.target.value })
-                  }
-                  className="border ml-4 rounded-md px-4 py-1 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                <img src={expiryinput} alt="Expiry" className="w-52 h-auto ml-4 " />
+                <select 
+                  id="category" 
+                  onChange={(e) => { 
+                  const value = e.target.value; 
+                  setNewRequest({ ...newRequest, category: value }); 
+                  }} 
+                  className="border ml-4 rounded-md px-4 py-1 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" 
                   required
-                />
+                >
+                  <option value="Makanan">Makanan</option>
+                  <option value="Anterin">Anterin</option>
+                  <option value="Pinjem">Pinjem</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
               </div>
               <div className="px-24 hover:scale-105 active:scale-100 transition-all cursor-pointer">
                 <img src={contactinput} alt="Contact" className="w-56 h-auto" />
