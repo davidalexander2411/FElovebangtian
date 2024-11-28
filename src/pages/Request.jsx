@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import requestinput from "../../public/img/requestinput.png";
-import feeinput from "../../public/img/feeinput.png";
-import contactinput from "../../public/img/contactinput.png";
+import categoryinput from "../../public/img/categoryinput.png";
+import titleinput from "../../public/img/titleinput.png";
 import expiryinput from "../../public/img/expiryinput.png";
 import submitbutton from "../../public/img/submitbutton3.png";
 
@@ -9,9 +9,9 @@ const Jamboard = () => {
   const [requests, setRequests] = useState([]);
   const [newRequest, setNewRequest] = useState({
     request: '',
-    fee: 0,
+    category: null,
     status: 'pending',
-    contact: '',
+    title: '',
     expiryTime: null,
   });
 
@@ -35,7 +35,7 @@ const Jamboard = () => {
       request: '',
       fee: 0,
       status: 'pending',
-      contact: '',
+      title: '',
       expiryTime: null,
     });
   };
@@ -51,7 +51,7 @@ const Jamboard = () => {
       className="wrapper flex flex-col items-center justify-center h-full overflow-y-hidden"
       style={{ backgroundImage: 'url(/img/backgroundrequest3.png)' }}
     >
-      <div className="rounded-lg w-full max-w-6xl px-6 py-2 relative">
+      <div className="rounded-lg w-full max-w-6xl px-6 py-2 relative mt-32">
         <div className="p-6">
           <form
             onSubmit={(e) => {
@@ -61,9 +61,22 @@ const Jamboard = () => {
             className="space-y-6"
           >
             {/* Inputs Container */}
+            <div className="px-24 hover:scale-105 active:scale-100 transition-all cursor-pointer">
+                <img src={titleinput} alt="Ttile" className="w-56 h-auto" />
+                <input
+                  type="text"
+                  id="title"
+                  value={newRequest.title}
+                  onChange={(e) =>
+                    setNewRequest({ ...newRequest, title: e.target.value })
+                  }
+                  className="border ml-4 rounded-md px-4 py-1 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  required
+                />
+            </div>
             <div className="inputs-container space-y-6 mt-28">
               <div className="px-24 hover:scale-105 active:scale-100 transition-all cursor-pointer">
-                <img src={requestinput} alt="Request" className="w-56 h-auto" />
+                <img src={requestinput} alt="Request" className="w-56 h-auto mb-1" />
                 <input
                   type="text"
                   id="request"
@@ -76,7 +89,7 @@ const Jamboard = () => {
                 />
               </div>
               <div className="px-24 hover:scale-105 active:scale-100 transition-all cursor-pointer">
-                <img src={expiryinput} alt="Expiry" className="w-52 h-auto ml-4 " />
+                <img src={categoryinput} alt="Expiry" className="w-56 h-auto ml-1" />
                 <select 
                   id="category" 
                   onChange={(e) => { 
@@ -93,20 +106,7 @@ const Jamboard = () => {
                 </select>
               </div>
               <div className="px-24 hover:scale-105 active:scale-100 transition-all cursor-pointer">
-                <img src={contactinput} alt="Contact" className="w-56 h-auto" />
-                <input
-                  type="text"
-                  id="contact"
-                  value={newRequest.contact}
-                  onChange={(e) =>
-                    setNewRequest({ ...newRequest, contact: e.target.value })
-                  }
-                  className="border ml-4 rounded-md px-4 py-1 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
-                  required
-                />
-              </div>
-              <div className="px-24 hover:scale-105 active:scale-100 transition-all cursor-pointer">
-                <img src={expiryinput} alt="Expiry" className="w-52 h-auto ml-4 " />
+                <img src={expiryinput} alt="Expiry" className="w-52 h-auto ml-4 mb-1" />
                 <select
                   id="expiry"
                   onChange={(e) => {
@@ -134,7 +134,7 @@ const Jamboard = () => {
 
             {/* Submit Button */}
             <div className="submit-container hover:scale-110 active:scale-110 transition-all cursor-pointer">
-              <button type="submit" className="mt-[35px] ml-[260px]">
+              <button type="submit" className="mt-[9px] ml-[260px]">
                 <img src={submitbutton} alt="Submit" className="w-[606px] h-auto" />
               </button>
             </div>
