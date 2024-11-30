@@ -1,57 +1,85 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import "../App.css";
 import Card from "../components/Card";
 import logo from "../../public/img/logo.png";
 import request from "../../public/img/request.png";
 import axios from "axios";
 
-function Makanan() {
-    const [data, setData] = useState([
-        {
-            title: "Makanan 1",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-        {
-            title: "Bantu makan di ayceb",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-        {
-            title: "Makanan 1",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-        {
-            title: "Bantu makan di ayceb",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-        {
-            title: "Beliin makan",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Anter ke Even",
-        },
-        {
-            title: "Bantu makan di ayceb",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-    ]);
+function Anterin() {
+	const [data, setData] = useState([
+		{
+			title: "Anterin 1",
+			category: "Anterin",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Anterin 1",
+		},
+		{
+			title: "Bantu Anterin ke ayceb",
+			category: "Anterin",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Anterin 1",
+		},
+		{
+			title: "Anterin 1",
+			category: "Anterin",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Anterin 1",
+		},
+		{
+			title: "Bantu Anterin ke ayceb",
+			category: "Anterin",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Anterin 1",
+		},
+		{
+			title: "Anterin 1",
+			category: "Anterin",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Anterin 1",
+		},
+		{
+			title: "Bantu Anterin ke ayceb",
+			category: "Anterin",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Anterin 1",
+		},
+	]);
+	// const token = localStorage.getItem("token");
 
-    return (
+	// async function getPostIt() {
+	// 	console.log("fetching data", localStorage.getItem("token"));
+	// 	const response = await axios.get(
+	// 		"https://proyek-akhir-exercise-be-5.vercel.app/card/get-cards",
+	// 		{
+	// 			headers: {
+	// 				Authorization: `Bearer ${token}`,
+	// 			},
+	// 			withCredentials: true,
+	// 		}
+	// 	);
+	// 	console.log("response", response);
+	// 	const responseData = response.data;
+
+	// 	// filter data by category === "Anterin"
+
+	// 	responseData.cards = responseData.cards.filter(
+	// 		(card) => card.category === "Anterin"
+	// 	);
+	// 	console.log(responseData);
+	// 	setData(responseData.cards);
+	// }
+
+	// useEffect(() => {
+	// 	getPostIt();
+	// }, []);
+
+	return (
         <>
             <div
                 className="wrapper relative flex flex-col justify-center overflow-x-hidden items-center text-center min-h-screen p-8"
@@ -94,4 +122,4 @@ function Makanan() {
     );
 }
 
-export default Makanan;
+export default Anterin;

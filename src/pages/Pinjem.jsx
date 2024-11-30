@@ -1,57 +1,85 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import "../App.css";
 import Card from "../components/Card";
 import logo from "../../public/img/logo.png";
 import request from "../../public/img/request.png";
 import axios from "axios";
 
-function Makanan() {
-    const [data, setData] = useState([
-        {
-            title: "Makanan 1",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-        {
-            title: "Bantu makan di ayceb",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-        {
-            title: "Makanan 1",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-        {
-            title: "Bantu makan di ayceb",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-        {
-            title: "Beliin makan",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Anter ke Even",
-        },
-        {
-            title: "Bantu makan di ayceb",
-            category: "makanan",
-            username: "user1",
-            contact: "081234567890",
-            permintaan: "Makanan 1",
-        },
-    ]);
+function Pinjem() {
+	const [data, setData] = useState([
+		{
+			title: "Pinjem 1",
+			category: "Pinjem",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Pinjem 1",
+		},
+		{
+			title: "Mau Pinjem Jaslab",
+			category: "Pinjem",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Pinjem jaslab besok",
+		},
+		{
+			title: "Pinjem 1",
+			category: "Pinjem",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Pinjem 1",
+		},
+		{
+			title: "Mau Pinjem Jaslab",
+			category: "Pinjem",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Pinjem jaslab besok",
+		},
+		{
+			title: "Pinjem 1",
+			category: "Pinjem",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Pinjem 1",
+		},
+		{
+			title: "Mau Pinjem Jaslab",
+			category: "Pinjem",
+			username: "user1",
+			contact: "081234567890",
+			permintaan: "Pinjem jaslab besok",
+		},
+	]);
+	// const token = localStorage.getItem("token");
 
-    return (
+	// async function getPostIt() {
+	// 	console.log("fetching data", localStorage.getItem("token"));
+	// 	const response = await axios.get(
+	// 		"https://proyek-akhir-exercise-be-5.vercel.app/card/get-cards",
+	// 		{
+	// 			headers: {
+	// 				Authorization: `Bearer ${token}`,
+	// 			},
+	// 			withCredentials: true,
+	// 		}
+	// 	);
+	// 	console.log("response", response);
+	// 	const responseData = response.data;
+
+	// 	// filter data by category === "Pinjem"
+
+	// 	responseData.cards = responseData.cards.filter(
+	// 		(card) => card.category === "Pinjem"
+	// 	);
+	// 	console.log(responseData);
+	// 	setData(responseData.cards);
+	// }
+
+	// useEffect(() => {
+	// 	getPostIt();
+	// }, []);
+
+	return (
         <>
             <div
                 className="wrapper relative flex flex-col justify-center overflow-x-hidden items-center text-center min-h-screen p-8"
@@ -94,4 +122,4 @@ function Makanan() {
     );
 }
 
-export default Makanan;
+export default Pinjem;

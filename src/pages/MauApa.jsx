@@ -11,10 +11,10 @@ function MauApa() {
 
 <div className="flex justify-center absolute bottom-0 w-full pb-5 overflow-hidden">
 <div className="flex justify-center space-x-10">
-    <a href="" target="_blank"><img src="../public/img/makanan.png" className="w-60 h-auto hover:scale-125 active:scale-110 transition-all cursor-pointer" /></a>
-    <a href="" target="_blank"><img src="../public/img/anterin.png" className="w-60 h-auto hover:scale-125 active:scale-110 transition-all cursor-pointer" /></a>
-    <a href="" target="_blank"><img src="../public/img/pnjm.png" className="w-60 h-auto bottom 0 hover:scale-125 active:scale-110 transition-all cursor-pointer" /></a>
-    <a href="" target="_blank"><img src="../public/img/lain.png" className="w-60 h-auto hover:scale-125 active:scale-110 transition-all cursor-pointer" /></a>
+    <a href="/main-menu/makanan" target="_blank"><img src="../public/img/makanan.png" className="w-60 h-auto hover:scale-125 active:scale-110 transition-all cursor-pointer" /></a>
+    <a href="/main-menu/anterin" target="_blank"><img src="../public/img/anterin.png" className="w-60 h-auto hover:scale-125 active:scale-110 transition-all cursor-pointer" /></a>
+    <a href="/main-menu/pinjem" target="_blank"><img src="../public/img/pnjm.png" className="w-60 h-auto bottom 0 hover:scale-125 active:scale-110 transition-all cursor-pointer" /></a>
+    <a href="/main-menu/lainnya" target="_blank"><img src="../public/img/lain.png" className="w-60 h-auto hover:scale-125 active:scale-110 transition-all cursor-pointer" /></a>
 </div>
 </div>
         </div>

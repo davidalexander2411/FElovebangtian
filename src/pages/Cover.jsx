@@ -1,9 +1,10 @@
 function Cover() {
     return (
         <>
-        <div className="h-screen w-screen">
+        <div className="h-screen w-screen overflow-hidden">
         <div className="w-full h-full relative">
                 <img src="../../public/img/background.png" className="w-full h-full object-cover absolute"/>
+                <img src="../../public/img/bantuinaja.png" className="w-full h-full ml-4 mb-2 object-cover absolute"/>
                 <img src="../../public/img/bantu.png" className="bantu-image"/>
                 <img src="../../public/img/mager fix.png" className="mager-fix"/>
                 {/* <img src="../../public/img/bantu pls.png" className="bantu-fix"/> */}
